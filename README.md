@@ -1,6 +1,6 @@
-# SmartReader AI – Plataforma Inteligente de Lectura de PDFs
+# Rada – Plataforma Inteligente de Lectura de PDFs
 
-SmartReader AI es una aplicación web full stack que permite a los usuarios subir archivos PDF, visualizar su contenido por secciones y recibir asistencia inteligente de IA para entender o resumir textos complejos. La idea es ofrecer una alternativa gratuita y expansible a las herramientas limitadas y pagas que existen actualmente en el mercado.
+Rada es una aplicación web full stack que permite a los usuarios subir archivos PDF, visualizar su contenido por secciones y recibir asistencia inteligente de IA para entender o resumir textos complejos. La idea es ofrecer una alternativa gratuita y expansible a las herramientas limitadas y pagas que existen actualmente en el mercado.
 
 Imaginá un Adobe Reader, pero potenciado con IA conversacional y resúmenes automáticos.
 
