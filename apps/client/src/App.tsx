@@ -1,10 +1,13 @@
+import { Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
+import Viewer from './pages/Viewer'
 
 const App = () => {
   return (
-    <main className="min-h-screen bg-black-100">
-      <Home />
-    </main>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/viewer" element={<Viewer />} />
+    </Routes>
   )
 }
 

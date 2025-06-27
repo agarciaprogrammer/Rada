@@ -1,8 +1,10 @@
+import { useNavigate } from 'react-router-dom'
+import { uploadPDF } from '../services/pdfService'
 import { useState } from 'react'
-import { uploadPDF } from '../Services/pdfService'
 
 const Home = () => {
   const [message, setMessage] = useState('')
+  const navigate = useNavigate()
 
   const handleUpload = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -10,8 +12,15 @@ const Home = () => {
     if (!input?.files || input.files.length === 0) return
 
     try {
-      const msg = await uploadPDF(input.files[0])
-      setMessage(msg)
+      const file = input.files[0]
+      await uploadPDF(file)
+
+      navigate('/viewer', {
+        state: {
+          file
+        }
+      })
+
     } catch (err) {
       setMessage('Error al subir el PDF')
     }
@@ -26,7 +35,7 @@ const Home = () => {
           Subir
         </button>
       </form>
-      {message && <p className="mt-4 text-green-600">{message}</p>}
+      {message && <p className="mt-4 text-red-600">{message}</p>}
     </div>
   )
 }
