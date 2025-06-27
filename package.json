@@ -1,0 +1,18 @@
+{
+  "name": "radarada",
+  "private": true,
+  "workspaces": [
+    "apps/client",
+    "apps/server"
+  ],
+  "version": "1.0.0",
+  "description": "SmartReader AI es una aplicación web full stack que permite a los usuarios subir archivos PDF, visualizar su contenido por secciones y recibir asistencia inteligente de IA para entender o resumir textos complejos. La idea es ofrecer una alternativa gratuita y expansible a las herramientas limitadas y pagas que existen actualmente en el mercado.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
