@@ -13,12 +13,12 @@ const Viewer = () => {
   
   useEffect(() => {
     const fetchText = async () => {
-      if (!fileMeta?.file) return
+      if (!fileMeta) return
 
-      console.log('[DEBUG] fileMeta:', fileMeta.file)
+      console.log('[DEBUG] fileMeta:', fileMeta)
 
       try {
-        const text = await extractTextFromPDF(fileMeta.file)
+        const text = await extractTextFromPDF(fileMeta)
         setPdfText(text)
       } catch (err) {
         console.error('[ERROR extractText]', err)
@@ -32,7 +32,7 @@ const Viewer = () => {
   }, [fileMeta])
 
   if (!fileMeta) {
-    navigate('/') // Si entraron directo, redireccionar a home
+    navigate('/')
     return null
   }
 
@@ -48,11 +48,11 @@ const Viewer = () => {
 
       <div className="border-2 border-gray-300 bg-black-50 h-[60vh] w-full rounded shadow p-4 overflow-y-scroll">
         {loading ? (
-          <p className="text-gray-400">Procesando PDF...</p>
+          <p className="text-white-400">Procesando PDF...</p>
         ) : error ? (
           <p className="text-red-600">{error}</p>
         ) : (
-          <pre className="whitespace-pre-wrap text-sm text-gray-800">{pdfText}</pre>
+          <pre className="whitespace-pre-wrap text-sm text-white-800">{pdfText}</pre>
         )}
       </div>
     </div>
